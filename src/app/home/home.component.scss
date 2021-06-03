@@ -1,0 +1,14 @@
+.welcome-jumbo{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.pokemon-fav{    
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        max-height: 210px;
+    }
+}

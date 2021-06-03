@@ -19,4 +19,9 @@ export class PokemonListComponent implements OnInit {
     this.pokemons = await this.pokemonService.getAll()
   }
 
+  getImageUrl(i: any): string{
+    const id = parseInt(i)+1
+    return `https://pokeres.bastionbot.org/images/pokemon/${id}.png`
+  }
+
 }
