@@ -1,10 +1,10 @@
 <h4 class="mb-16 mt-16">Meus pokemons favoritos</h4>
-<div *ngIf="favoritos" class="flex-container mb-16">
+<div *ngIf="favoritos" class="flex-container mb-16" [@listAnimation]="favoritos.length">
     <div class="card pokemon-card" style="width: 18rem;" *ngFor="let pokemon of favoritos">
         <img [src]="pokemon.imgUrl" class="card-img-top p-8" alt="...">
         <div class="pokemon-body">
             <h5 class="body-text text-capitalize">{{pokemon.name}}</h5>
-            <div class="body-fav pokemon-fav" (click)="popfavorite(pokemon.name)">
+            <div class="body-fav pokemon-fav" (click)="popFavorite(pokemon.name)">
                 <icon-heart></icon-heart>
             </div>
         </div>

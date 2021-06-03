@@ -8,6 +8,7 @@ import { PokemonModule } from './pokemon/pokemon.module';
 import { HomeModule } from './home/home.module';
 import { NavbarModule } from './navbar/navbar.module';
 import { CustomsModule } from './customs/customs.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { CustomsModule } from './customs/customs.module';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    BrowserAnimationsModule,
     PokemonModule,
     HomeModule,
     NavbarModule,

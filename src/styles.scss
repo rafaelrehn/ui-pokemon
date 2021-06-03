@@ -1,2 +1,64 @@
 /* You can add global styles to this file, and also import other style files */
 @import '/src/assets/css/utils.scss';
+
+*{
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+
+.pokemon-card{
+    flex: 1;
+    min-width: 200px;
+    max-width: 362px;
+    max-height: 410px;
+    min-height: 240px;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover{
+        background: rgba(0,0,0,0.12);
+    }
+    .card-img-top{
+        min-height: 180px;
+    }
+
+    .pokemon-body{
+        h5{
+            display: flex;   
+            align-items: center;
+        }
+        display: flex;
+        height: 46px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 8px;
+        .body-text{
+            border: 0px;
+            margin: 0px;
+        }
+        .body-fav{
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100px;
+            fill: rgb(210, 210, 210)
+        }
+    }
+}
+
+.pokemon-fav{
+    fill: red !important;
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+}
+.page-link{
+    cursor: pointer;
+}

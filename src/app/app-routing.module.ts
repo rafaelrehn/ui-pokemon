@@ -6,9 +6,9 @@ import { PokemonListComponent } from './pokemon/pokemon-list/pokemon-list.compon
 
 const routes: Routes = [
   { path:'', redirectTo: '/home', pathMatch: 'full'},
-  { path: 'home', component: HomeComponent },
-  { path: 'pokemons', component: PokemonListComponent },
-  { path: 'pokemons-fav', component: PokemonFavComponent },
+  { path: 'home', component: HomeComponent, data: { animationState: 'One' } },
+  { path: 'pokemons', component: PokemonListComponent, data: { animationState: 'Two' } },
+  { path: 'pokemons-fav', component: PokemonFavComponent, data: { animationState: 'Three' } },
 
 ];
 
