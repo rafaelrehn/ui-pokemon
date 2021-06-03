@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { PokemonModule } from './pokemon/pokemon.module';
 import { HomeModule } from './home/home.module';
 import { NavbarModule } from './navbar/navbar.module';
+import { CustomsModule } from './customs/customs.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NavbarModule } from './navbar/navbar.module';
     HttpClientModule,
     PokemonModule,
     HomeModule,
-    NavbarModule
+    NavbarModule,
+    CustomsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

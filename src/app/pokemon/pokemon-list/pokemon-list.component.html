@@ -1,11 +1,12 @@
 <h4 class="mb-16 mt-16">Lista dos pokemons</h4>
+<icon-heart></icon-heart>
 <!-- <p *ngFor="let pokemon of pokemons.results">{{pokemon.name}}</p> -->
 <div *ngIf="pokemons" class="flex-container mb-16">
     <div class="card pokemon-card" style="width: 18rem;" *ngFor="let pokemon of pokemons.results; let i = index">
         <img [src]="getImageUrl(i)" class="card-img-top p-8" alt="...">
         <div class="pokemon-body">
             <h5 class="body-text text-capitalize">{{pokemon.name}}</h5>           
-            <div class="body-fav">{{i+1}}</div>
+            <div class="body-fav"><icon-heart></icon-heart></div>
         </div>
     </div>
 </div>
