@@ -87,7 +87,7 @@ export const PokemonListMock = {
         }
     ]
 }
-export const InfoPokemon = {
+export const InfoPokemonMock = {
     "abilities": [
       {
         "ability": {

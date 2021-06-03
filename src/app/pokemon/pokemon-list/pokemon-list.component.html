@@ -1,13 +1,31 @@
 <h4 class="mb-16 mt-16">Lista dos pokemons</h4>
-<icon-heart></icon-heart>
 <!-- <p *ngFor="let pokemon of pokemons.results">{{pokemon.name}}</p> -->
 <div *ngIf="pokemons" class="flex-container mb-16">
     <div class="card pokemon-card" style="width: 18rem;" *ngFor="let pokemon of pokemons.results; let i = index">
         <img [src]="getImageUrl(i)" class="card-img-top p-8" alt="...">
         <div class="pokemon-body">
-            <h5 class="body-text text-capitalize">{{pokemon.name}}</h5>           
-            <div class="body-fav"><icon-heart></icon-heart></div>
+            <h5 class="body-text text-capitalize">{{pokemon.name}}</h5>
+            <div class="body-fav" [ngClass]="{'pokemon-fav': isFavorite(i)}" (click)="pushPopfavorite(i)">
+                <icon-heart></icon-heart>
+            </div>
         </div>
     </div>
 </div>
 
+<div class="pagination">
+    <nav *ngIf="paginator" aria-label="Page navigation example">
+        <ul class="pagination" style="flex-wrap: wrap">
+            <!-- <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li> -->
+            <li class="page-item" [ngClass]="{'active': paginator.current == pag}" *ngFor="let pag of paginator.pages"><a class="page-link" href="#">{{pag}}</a></li>
+            <!-- <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li> -->
+        </ul>
+    </nav>
+</div>

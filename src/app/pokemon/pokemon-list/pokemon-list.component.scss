@@ -25,12 +25,20 @@
         .body-fav{
             width: 30px;
             height: 30px;
-            background: #c7c7c7;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 100px;
-            color: white;
+            fill: rgb(210, 210, 210)
         }
     }
+}
+
+.pokemon-fav{
+    fill: red !important;
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
 }
