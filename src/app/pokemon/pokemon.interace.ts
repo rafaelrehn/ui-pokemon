@@ -8,4 +8,10 @@ export interface ListPokemon{
 export interface ListPokemonResults{
     name: string
     url: string
+    favorite: boolean
 }
+
+export interface PokemonFavorito{
+    name: string
+    imgUrl: string
+  }

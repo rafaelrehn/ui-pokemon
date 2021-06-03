@@ -5,7 +5,7 @@
         <img [src]="getImageUrl(i)" class="card-img-top p-8" alt="...">
         <div class="pokemon-body">
             <h5 class="body-text text-capitalize">{{pokemon.name}}</h5>
-            <div class="body-fav" [ngClass]="{'pokemon-fav': isFavorite(i)}" (click)="pushPopfavorite(i)">
+            <div class="body-fav" [ngClass]="{'pokemon-fav': pokemon.favorite}" (click)="pushPopfavorite(pokemon.name, i)">
                 <icon-heart></icon-heart>
             </div>
         </div>
@@ -20,7 +20,8 @@
                     <span aria-hidden="true">&laquo;</span>
                 </a>
             </li> -->
-            <li class="page-item" [ngClass]="{'active': paginator.current == pag}" *ngFor="let pag of paginator.pages"><a class="page-link" href="#">{{pag}}</a></li>
+            <li class="page-item" [ngClass]="{'active': paginator.current == pag}"
+             *ngFor="let pag of paginator.pages"><a class="page-link" (click)="goToPaginator(pag)">{{pag}}</a></li>
             <!-- <li class="page-item">
                 <a class="page-link" href="#" aria-label="Next">
                     <span aria-hidden="true">&raquo;</span>
