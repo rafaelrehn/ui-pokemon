@@ -1,1 +1,4 @@
-<p>pokemon-list works!</p>
+<h4>Pokemon List</h4>
+<span *ngIf="pokemons">
+    <p *ngFor="let pokemon of pokemons.results">{{pokemon.name}}</p>
+</span>
